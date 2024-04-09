@@ -23,6 +23,8 @@ Clone the repository:
   git clone https://github.com/Mentorsejdiu/WebJSGrabber.git
 Install depencies:
   pip install -r requirements.txt
+
+WebJSGrabber is a valuable tool for bug hunters and penetration testers aiming to review the JavaScript code of a target website for potential vulnerabilities or security issues. By extracting all JavaScript files linked within the HTML source of a website, WebJSGrabber enables security professionals to analyze the client-side codebase thoroughly.
   
 Contribution:
 
