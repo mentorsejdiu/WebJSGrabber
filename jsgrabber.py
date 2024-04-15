@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import os
 import sys
+from urllib.parse import urljoin
 
 def extract_js_links(url):
     try:
@@ -29,8 +30,9 @@ def save_js_files(js_links, output_dir):
 
         for link in js_links:
             filename = link.split('/')[-1]
+            url = urljoin(website_url, link)
             with open(os.path.join(output_dir, filename), 'wb') as f:
-                response = requests.get(link)
+                response = requests.get(url)
                 f.write(response.content)
             print(f"Saved {filename} successfully.")
 
